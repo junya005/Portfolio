@@ -1,3 +1,7 @@
+---
+id: "game-cloud-pinball"
+---
+
 ## CloudPinBall
 [こちらから遊べます](https://junya005.github.io/portfolio/game/CloudPinBall/)
 ### 制作時間
