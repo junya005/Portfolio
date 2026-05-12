@@ -1,9 +1,9 @@
 ---
 // Propsの定義
-const { title, description, period, highlight } = Astro.props;
+const { title, description, period, projectPath } = Astro.props;
 ---
 
-<article class="card">
+<article class="card"><a href={projectPath}>
   <div class="content">
     <h3>{title}</h3>
     <p class="period">🗓 製作期間: {period}</p>
@@ -12,7 +12,7 @@ const { title, description, period, highlight } = Astro.props;
       <strong>Highlight:</strong> {highlight}
     </div>
   </div>
-</article>
+</a></article>
 
 <style>
   .card {
