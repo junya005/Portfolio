@@ -1,12 +1,13 @@
 [
   {
     "category": "game",
-    "title": "作品タイトル",
-    "description": "簡易説明文",
+    "title": "Cloud PinBall",
+    "description": "雲をテーマにしたピンボールゲーム",
     "period": "2024/04 - 2024/05",
-    "productionTime": "3時間",
-    "highlight": "こだわったポイント",
+    "productionTime": "12時間",
+    "highlight": "リアルのピンボール筐体をある程度再現しました。<br>プランジャーやフリッパーのボール射出時に上部方向へのブーストをかけることで遊びやすくしています。",
+    "howToPlay": "スペースキーを長押し: プランジャーを引っ張る<br>スペースキーを長押し後、離す: ボール射出<br>Qキー: 左のフリッパーを動かす<br>Eキー: 右のフリッパーを動かす<br>画面上のボタンをクリック:<br> Start: ゲーム開始<br> Title: タイトル画面へ<br> Retry: ゲームをリスタート",
     "thumbnailPath": "",
-    "projectPath": ""
+    "projectPath": "https://junya005.github.io/portfolio/games/CloudPinBall/index.html"
   }
 ]
