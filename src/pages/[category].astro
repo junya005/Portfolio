@@ -1,51 +1,56 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import projects from '../data/projects.json';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import projects from "../data/projects.json";
 
 // ページを生成するための設定
 export function getStaticPaths() {
-  return [
-    { params: { category: 'game' }, props: { title: 'ゲーム作品' } },
-    { params: { category: 'sound' }, props: { title: 'サウンド作品' } },
-    { params: { category: 'illustration' }, props: { title: 'イラスト作品' } },
-  ];
+    return [
+        { params: { category: "game" }, props: { title: "ゲーム作品" } },
+        { params: { category: "sound" }, props: { title: "サウンド作品" } },
+        {
+            params: { category: "illustration" },
+            props: { title: "イラスト作品" },
+        },
+    ];
 }
 
 const { category } = Astro.params;
 const { title } = Astro.props;
 
 // JSONから該当カテゴリーの作品だけを抽出
-const filteredProjects = projects.filter(p => p.category === category);
+const filteredProjects = projects.filter((p) => p.category === category);
 ---
 
 <Layout title={title}>
-  <main>
-    <h1>{title}</h1>
-    
-    {filteredProjects.length > 0 ? (
-      <div class="project-grid">
-        {filteredProjects.map((project) => (
-          <ProjectCard {...project} />
-        ))}
-      </div>
-    ) : (
-      <p>作品は準備中です。</p>
-    )}
-  </main>
+    <main>
+        <h1>{title}</h1>
+
+        {
+            filteredProjects.length > 0 ? (
+                <div class="project-grid">
+                    {filteredProjects.map((project) => (
+                        <ProjectCard {...project} />
+                    ))}
+                </div>
+            ) : (
+                <p>作品は準備中です。</p>
+            )
+        }
+    </main>
 </Layout>
 
 <style>
-  main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
 </style>

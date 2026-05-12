@@ -1,5 +1,5 @@
 ---
-id: "game-cloud-pinball"
+title: CloudPinBall
 ---
 
 ## CloudPinBall

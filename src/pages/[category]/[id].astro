@@ -1,27 +1,28 @@
 ---
 // src/pages/portfolio/[category]/[id].astro
+import Layout from '../../layouts/Layout.astro';
 import { getEntry } from 'astro:content';
-import worksData from '../../../data/projects.json';
+import worksData from '../../data/projects.json'; // `getStaticPaths`のために`projects.json`を直接読み込みます
 
 export async function getStaticPaths() {
-  return worksData.map(work => ({
-    params: { category: work.category, id: work.id },
-    props: { work }
-  }));
+    return worksData.map((work) => ({
+        params: { category: work.category, id: work.id },
+        props: { work },
+    }));
 }
 
 const { work } = Astro.props;
 
-// JSONの contentId を使って Markdownを取得
-const entry = await getEntry('posts', work.detailPath);
+const entry = await getEntry('posts', work.id);
+
 const { Content } = await entry.render();
 ---
 
-<html>
-  <body>
-    <h1>{work.title}</h1> <!-- JSONのデータ -->
-    <div class="content">
-      <Content /> <!-- Markdownの中身 -->
-    </div>
-  </body>
-</html>
+<Layout title={work.title}>
+    <main>
+        <h1>{work.title}</h1>
+        <div class="content">
+            <Content />
+        </div>
+    </main>
+</Layout>
