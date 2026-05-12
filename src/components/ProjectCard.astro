@@ -8,9 +8,6 @@ const { title, description, period, projectPath } = Astro.props;
     <h3>{title}</h3>
     <p class="period">🗓 製作期間: {period}</p>
     <p class="description">{description}</p>
-    <div class="highlight">
-      <strong>Highlight:</strong> {highlight}
-    </div>
   </div>
 </a></article>
 
@@ -29,10 +26,5 @@ const { title, description, period, projectPath } = Astro.props;
   h3 { margin-top: 0; color: #333; }
   .period { font-size: 0.85rem; color: #666; }
   .description { margin: 1rem 0; line-height: 1.6; }
-  .highlight { 
-    font-size: 0.9rem; 
-    padding: 0.5rem; 
-    background: #f0f7ff; 
-    border-radius: 4px;
-  }
+  
 </style>
