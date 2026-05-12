@@ -1,9 +1,9 @@
 ---
 const baseUrl = import.meta.env.BASE_URL;
 // Propsの定義
-const { id, category, title, description, period, projectPath } = Astro.props;
+const { id, title, description, period, projectPath } = Astro.props;
 
-const detailUrl = `${baseUrl}/${category}/${id}`;
+const detailUrl = `${baseUrl}/detail/${id}`;
 ---
 
 <article class="card">
