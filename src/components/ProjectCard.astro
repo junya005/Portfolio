@@ -3,13 +3,16 @@
 const { title, description, period, projectPath } = Astro.props;
 ---
 
-<article class="card"><a href={projectPath}>
+<article class="card">
   <div class="content">
     <h3>{title}</h3>
     <p class="period">🗓 製作期間: {period}</p>
     <p class="description">{description}</p>
+    <p class="projectLink">
+      <a href={projectPath}>作品を見る</a>
+    </p>
   </div>
-</a></article>
+</article>
 
 <style>
   .card {
@@ -26,5 +29,5 @@ const { title, description, period, projectPath } = Astro.props;
   h3 { margin-top: 0; color: #333; }
   .period { font-size: 0.85rem; color: #666; }
   .description { margin: 1rem 0; line-height: 1.6; }
-  
+  .projectLink { text-align: right }
 </style>
