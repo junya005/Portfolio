@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { work } = Astro.props;
 
 // JSONの contentId を使って Markdownを取得
-const entry = await getEntry('portfolio-posts', work.detailPath);
+const entry = await getEntry('../../../posts', work.detailPath);
 const { Content } = await entry.render();
 ---
 
