@@ -1,16 +1,20 @@
 ---
-// astro.config.mjs の base 設定を取得
-const baseUrl = import.meta.env.BASE_URL; 
+import { Icon } from "astro-icon/components";
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <header class="site-header">
   <div class="container">
-    <a href={`${baseUrl}/`} class="logo">My Portfolio</a>
+    <a href={`${baseUrl}/`} class="logo">
+      <Icon name="junya005" class="logo-icon" />
+    </a>
     <nav class="nav">
       <ul>
-        <li><a href={`${baseUrl}/game`}>ゲーム</a></li>
-        <li><a href={`${baseUrl}/sound`}>サウンド</a></li>
-        <li><a href={`${baseUrl}/illustration`}>イラスト</a></li>
+        <li><a href={`${baseUrl}/`}>ホーム</a></li>
+        <li><a href={`${baseUrl}/game/`}>ゲーム</a></li>
+        <li><a href={`${baseUrl}/sound/`}>サウンド</a></li>
+        <li><a href={`${baseUrl}/illustration/`}>イラスト</a></li>
       </ul>
     </nav>
   </div>
@@ -18,7 +22,7 @@ const baseUrl = import.meta.env.BASE_URL;
 
 <style>
   .site-header {
-    background-color: #333;
+    background-color: #52c3f1;
     color: #fff;
     padding: 1rem 0;
     position: sticky;
@@ -33,11 +37,23 @@ const baseUrl = import.meta.env.BASE_URL;
     align-items: center;
     padding: 0 1rem;
   }
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+
+  /* リンクによる色変更の阻止 */
+  .logo,
+  .logo:visited,
+  .logo:active,
+  .logo:focus {
+    width: 180px;
     text-decoration: none;
+    color: inherit;
+    outline: none;
+    display: inline-block;
+  }
+  .logo-icon {
     color: #fff;
+    width: 100%;
+    height: auto;
+    display: block;
   }
   .nav ul {
     list-style: none;
@@ -50,6 +66,7 @@ const baseUrl = import.meta.env.BASE_URL;
     text-decoration: none;
     color: #eee;
     font-weight: 500;
+    font-size: 1.2rem;
     transition: color 0.2s;
   }
   .nav a:hover {
@@ -57,7 +74,6 @@ const baseUrl = import.meta.env.BASE_URL;
     text-decoration: underline;
   }
 
-  /* スマホ対応 */
   @media (max-width: 600px) {
     .container {
       flex-direction: column;

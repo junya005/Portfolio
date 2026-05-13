@@ -1,14 +1,14 @@
 ---
 // src/pages/detail/[id].astro
-import Layout from '../../layouts/Layout.astro';
-import { getCollection, render } from 'astro:content'; // renderをインポート
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content"; // renderをインポート
 
 export async function getStaticPaths() {
-    const allPosts = await getCollection('posts');
-    return allPosts.map((entry) => ({
-        params: { id: entry.id }, // 最新版では slug ではなく id を使うのが一般的です
-        props: { entry },
-    }));
+  const allPosts = await getCollection("posts");
+  return allPosts.map((entry) => ({
+    params: { id: entry.id }, // 最新版では slug ではなく id を使うのが一般的です
+    props: { entry },
+  }));
 }
 
 const { entry } = Astro.props;
@@ -19,10 +19,18 @@ const { Content } = await render(entry);
 ---
 
 <Layout title={entry.data.title}>
-    <main>
-        <h1>{entry.data.title}</h1>
-        <div class="content">
-            <Content />
-        </div>
-    </main>
+  <main>
+    <div class="markdown-body">
+      <h1>{entry.data.title}</h1>
+      <Content />
+    </div>
+  </main>
 </Layout>
+
+<style>
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+</style>

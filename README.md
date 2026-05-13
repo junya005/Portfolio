@@ -1,46 +1,33 @@
-# Astro Starter Kit: Basics
+# Portfolio
+Portfolio用ページのリポジトリです
 
-```sh
-npm create astro@latest -- --template basics
-```
+## PinBall
+[こちらから遊べます](https://junya005.github.io/portfolio/game/PinBall/)
+### 制作時間
+- 2時間
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### こだわりポイント
+- ライティングやBloomを使用して暗めの雰囲気を演出しました。
 
-## 🚀 Project Structure
+### 操作方法
+- Left Click(or Hold): プランジャー(発射機構)を動かす
+- Space: ボールをリスポーンさせる
 
-Inside of your Astro project, you'll see the following folders and files:
+## CloudPinBall
+[こちらから遊べます](https://junya005.github.io/portfolio/game/CloudPinBall/)
+### 制作時間
+- 14時間
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+### こだわりポイント
+- リアルのピンボール筐体をある程度再現しました。
+- プランジャーやフリッパーのボール射出時に上部方向へのブーストをかけることで遊びやすくしています。
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### 操作方法
+- スペースキーを長押し: プランジャーを引っ張る
+- スペースキーを長押し後、離す: ボール射出
+- Qキー: 左のフリッパーを動かす
+- Eキー: 右のフリッパーを動かす
+- 画面上のボタンをクリック:
+  - Start: ゲーム開始
+  - Title: タイトル画面へ
+  - Retry: ゲームをリスタート
