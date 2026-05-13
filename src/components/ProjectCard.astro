@@ -5,11 +5,12 @@ const { id, title, description, period, projectPath, thumbnailPath } =
   Astro.props;
 
 const detailUrl = `${baseUrl}/detail/${id}`;
+const thumbnailUrl = `${baseUrl}/${thumbnailPath}`;
 ---
 
 <article class="card">
   <a href={detailUrl} class="thumbnail-link">
-    <img src={thumbnailPath} alt={title} class="thumbnail" />
+    <img src={thumbnailUrl} alt={title} class="thumbnail" />
   </a>
   <div class="content">
     <a href={detailUrl} class="title">
