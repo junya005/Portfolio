@@ -16,5 +16,14 @@
     "period": "2026/4/25 - 2026/5/9",
     "thumbnailPath": "/images/thumbnails/CloudPinBall_logo.png",
     "projectPath": "https://junya005.github.io/portfolio/games/CloudPinBall/index.html"
+  },
+  {
+    "id": "game-kami-sumo",
+    "category": "game",
+    "title": "Kami Sumo",
+    "description": "紙相撲ゲーム",
+    "period": "2026/5/9 - 2026/5/16",
+    "thumbnailPath": "",
+    "projectPath": "https://junya005.github.io/portfolio/games/KamiSumo/index.html"
   }
 ]
