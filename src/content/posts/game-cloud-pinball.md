@@ -3,7 +3,7 @@ title: CloudPinBall
 ---
 
 ![スクリーンショット](/portfolio/images/screenshots/cloudpinball_000.webp)
-[こちらから遊べます](https://junya005.github.io/portfolio/game/CloudPinBall/)
+[こちらから遊べます](https://junya005.github.io/portfolio/games/CloudPinBall/)
 
 ### 制作時間
 - 14時間
