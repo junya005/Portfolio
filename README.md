@@ -2,7 +2,7 @@
 Portfolio用ページのリポジトリです
 
 ## PinBall
-[こちらから遊べます](https://junya005.github.io/portfolio/game/PinBall/)
+[こちらから遊べます](https://junya005.github.io/portfolio/games/PinBall/)
 ### 制作時間
 - 2時間
 
@@ -14,7 +14,7 @@ Portfolio用ページのリポジトリです
 - Space: ボールをリスポーンさせる
 
 ## CloudPinBall
-[こちらから遊べます](https://junya005.github.io/portfolio/game/CloudPinBall/)
+[こちらから遊べます](https://junya005.github.io/portfolio/games/CloudPinBall/)
 ### 制作時間
 - 14時間
 
@@ -31,3 +31,18 @@ Portfolio用ページのリポジトリです
   - Start: ゲーム開始
   - Title: タイトル画面へ
   - Retry: ゲームをリスタート
+
+## KamiSumo
+
+[こちらから遊べます](https://junya005.github.io/portfolio/games/KamiSumo/)
+
+### 制作時間
+- 8時間
+
+### こだわりポイント
+- 徳川式紙相撲の寸法を完全に再現しました。
+- すぐに倒れにくくすることで、試合の深みを出しました。
+
+### 操作方法
+- 左クリック： 土俵を揺らす
+- 決着時、右クリック： リスタート
