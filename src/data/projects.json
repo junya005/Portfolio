@@ -25,5 +25,14 @@
     "period": "2026/5/9 - 2026/5/16",
     "thumbnailPath": "",
     "projectPath": "https://junya005.github.io/portfolio/games/KamiSumo/index.html"
+  },
+  {
+    "id": "game-ore-clicker",
+    "category": "game",
+    "title": "Ore Clicker",
+    "description": "ガチャシステムを採用したクリッカーゲーム",
+    "period": "2026/5/23 - 2026/5/30",
+    "thumbnailPath": "",
+    "projectPath": "https://junya005.github.io/portfolio/games/OreClicker/index.html"
   }
 ]
